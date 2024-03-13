@@ -30,7 +30,6 @@ export class UserService {
     user.creditcard_name = data.creditcard_name;
     user.creditcard_expired = data.creditcard_expired;
     user.creditcard_cvv = data.creditcard_cvv;
-    console.log(user);
     return this.userRepository.save(user);
   }
 
