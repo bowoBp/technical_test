@@ -18,7 +18,7 @@ export class User {
   password: string;
 
   @Column()
-  photos: string[];
+  photos: string;
 
   @Column()
   creditcard_type: string;

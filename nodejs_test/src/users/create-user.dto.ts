@@ -18,7 +18,7 @@ export class CreateUserDto {
   password: string;
 
   @IsNotEmpty()
-  photos: string[]; // Assuming this is an array of file paths
+  photos: string; // Assuming this is an array of file paths
 
   @IsNotEmpty()
   @IsString()

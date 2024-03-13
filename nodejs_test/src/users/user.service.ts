@@ -15,7 +15,7 @@ export class UserService {
   }
 
   // findOne(id: number) {
-  //   return this.userRepository.find(id);
+  //   return this.userRepository.findOneByOrFail(id);
   // }
 
   create(data: CreateUserDto) {
