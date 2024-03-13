@@ -6,7 +6,7 @@ import {
   HttpCode,
   HttpStatus,
   Param,
-  //Post,
+  Post,
   Put,
   UseFilters,
 } from '@nestjs/common';
@@ -33,12 +33,12 @@ export class UserController {
   //     };
   //   }
 
-  //   @Post()
-  //   async create(@Body() data: CreateUserDto) {
-  //     return {
-  //       data: await this.userService.create(data),
-  //     };
-  //   }
+  @Post()
+  async create(@Body() data: CreateUserDto) {
+    return {
+      data: await this.userService.create(data),
+    };
+  }
 
   @Put(':id')
   async update(@Body() data: CreateUserDto, @Param('id') id: number) {
