@@ -14,23 +14,23 @@ export class UserService {
     return this.userRepository.find();
   }
 
-  // findOne(id: number) {
-  //   return this.userRepository.findOneByOrFail(id);
-  // }
+  findOne(idUser: number) {
+    return this.userRepository.findOneBy({ id: idUser });
+  }
 
   create(data: CreateUserDto) {
     const user = new User();
     user.name = data.name;
-    user.name = data.name;
+    user.address = data.address;
     user.email = data.email;
     user.password = data.password;
     user.photos = data.photos;
-    user.address = data.address;
-    user.creditcard_cvv = data.creditcard_cvv;
-    user.creditcard_expired = data.creditcard_expired;
-    user.creditcard_name = data.creditcard_name;
-    user.creditcard_number = data.creditcard_number;
     user.creditcard_type = data.creditcard_type;
+    user.creditcard_number = data.creditcard_number;
+    user.creditcard_name = data.creditcard_name;
+    user.creditcard_expired = data.creditcard_expired;
+    user.creditcard_cvv = data.creditcard_cvv;
+    console.log(user);
     return this.userRepository.save(user);
   }
 

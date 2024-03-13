@@ -26,12 +26,12 @@ export class UserController {
     };
   }
 
-  //   @Get(':id')
-  //   async findOne(@Param('id') id: number) {
-  //     return {
-  //       data: await this.userService.findOne(id),
-  //     };
-  //   }
+  @Get(':id')
+  async findOne(@Param('id') id: number) {
+    return {
+      data: await this.userService.findOne(id),
+    };
+  }
 
   @Post()
   async create(@Body() data: CreateUserDto) {
